@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package notifications;
+
+option go_package = "github.com/LavaJover/notification-service/pkg/proto/gen;notepb";
+
+service NotificationService{
+    rpc SendEmail (SendEmailRequest) returns (SendEmailResponse);
+}
+
+
+message SendEmailRequest{
+    string sender = 1;
+    string recipient = 2;
+    string text = 3;
+}
+
+message SendEmailResponse{
+    string sender = 1;
+    string recipient = 2;
+}
