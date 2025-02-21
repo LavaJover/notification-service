@@ -8,7 +8,6 @@ service NotificationService{
     rpc SendEmail (SendEmailRequest) returns (SendEmailResponse);
 }
 
-
 message SendEmailRequest{
     string sender = 1;
     string recipient = 2;
